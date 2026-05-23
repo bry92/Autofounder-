@@ -1,0 +1,44 @@
+{
+  "type": "object",
+  "properties": {
+    "business_id": {
+      "type": "string"
+    },
+    "decision_type": {
+      "type": "string",
+      "enum": [
+        "Strategy",
+        "Marketing",
+        "Sales",
+        "Product",
+        "Operations",
+        "Finance",
+        "Content",
+        "Outreach"
+      ]
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "reasoning": {
+      "type": "string"
+    },
+    "action_taken": {
+      "type": "string"
+    },
+    "outcome": {
+      "type": "string"
+    },
+    "confidence_score": {
+      "type": "number"
+    },
+    "approved_by_human": {
+      "type": "boolean"
+    },
+    "impact_observed": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "AIDecisionLog"
+}

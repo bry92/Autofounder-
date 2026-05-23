@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "business_id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "Blog Post",
+        "Social Media Post",
+        "Email",
+        "Ad Copy",
+        "Landing Page",
+        "Product Description",
+        "Newsletter",
+        "Video Script",
+        "SEO Article"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "Website",
+        "Twitter/X",
+        "LinkedIn",
+        "Instagram",
+        "Facebook",
+        "Email",
+        "TikTok",
+        "YouTube",
+        "All"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Draft",
+        "Review",
+        "Scheduled",
+        "Published",
+        "Archived"
+      ]
+    },
+    "scheduled_publish": {
+      "type": "string"
+    },
+    "published_at": {
+      "type": "string"
+    },
+    "performance_score": {
+      "type": "number"
+    },
+    "ai_generated": {
+      "type": "boolean"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "ContentPiece"
+}

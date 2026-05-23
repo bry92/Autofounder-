@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "business_id": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "revenue": {
+      "type": "number"
+    },
+    "expenses": {
+      "type": "number"
+    },
+    "profit": {
+      "type": "number"
+    },
+    "leads_generated": {
+      "type": "number"
+    },
+    "leads_converted": {
+      "type": "number"
+    },
+    "website_visitors": {
+      "type": "number"
+    },
+    "email_open_rate": {
+      "type": "number"
+    },
+    "conversion_rate": {
+      "type": "number"
+    },
+    "customer_count": {
+      "type": "number"
+    },
+    "churn_rate": {
+      "type": "number"
+    },
+    "tasks_completed": {
+      "type": "number"
+    },
+    "ai_actions_taken": {
+      "type": "number"
+    },
+    "health_score": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "BusinessMetric"
+}

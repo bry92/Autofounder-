@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "business_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Marketing",
+        "Sales",
+        "Product",
+        "Support",
+        "Finance",
+        "Strategy",
+        "Content",
+        "Operations",
+        "Development"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Queued",
+        "In Progress",
+        "Completed",
+        "Failed",
+        "Skipped"
+      ]
+    },
+    "assigned_to": {
+      "type": "string",
+      "enum": [
+        "AI Agent",
+        "Human",
+        "Both"
+      ]
+    },
+    "output": {
+      "type": "string"
+    },
+    "scheduled_at": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": "string"
+    },
+    "auto_generated": {
+      "type": "boolean"
+    },
+    "impact": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "AITask"
+}

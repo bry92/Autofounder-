@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "idea": {
+      "type": "string"
+    },
+    "niche": {
+      "type": "string"
+    },
+    "target_audience": {
+      "type": "string"
+    },
+    "value_proposition": {
+      "type": "string"
+    },
+    "business_model": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Generating",
+        "Active",
+        "Paused",
+        "Scaling"
+      ]
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "Ideation",
+        "Building",
+        "Launching",
+        "Operating",
+        "Scaling"
+      ]
+    },
+    "revenue_goal_monthly": {
+      "type": "number"
+    },
+    "revenue_actual_monthly": {
+      "type": "number"
+    },
+    "website_url": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "brand_colors": {
+      "type": "string"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "ai_strategy": {
+      "type": "string"
+    },
+    "ai_last_action": {
+      "type": "string"
+    },
+    "ai_next_action": {
+      "type": "string"
+    },
+    "health_score": {
+      "type": "number"
+    },
+    "tasks_completed_today": {
+      "type": "number"
+    },
+    "autonomous_mode": {
+      "type": "boolean"
+    }
+  },
+  "required": [],
+  "name": "Business"
+}

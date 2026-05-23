@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "business_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "New Lead",
+        "Lead Inactive 3 Days",
+        "Daily Morning",
+        "Daily Evening",
+        "Weekly Review",
+        "Revenue Drop",
+        "New Customer",
+        "Task Overdue",
+        "Content Due",
+        "Manual"
+      ]
+    },
+    "action": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean"
+    },
+    "last_fired": {
+      "type": "string"
+    },
+    "times_fired": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "AutomationRule"
+}

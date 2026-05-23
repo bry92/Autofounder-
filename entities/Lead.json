@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "business_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "Website",
+        "Social Media",
+        "Email Campaign",
+        "Referral",
+        "Cold Outreach",
+        "AI Generated",
+        "Organic",
+        "Paid Ad"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Contacted",
+        "Qualified",
+        "Proposal Sent",
+        "Negotiating",
+        "Won",
+        "Lost",
+        "Nurturing"
+      ]
+    },
+    "score": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "last_contacted": {
+      "type": "string"
+    },
+    "next_followup": {
+      "type": "string"
+    },
+    "deal_value": {
+      "type": "number"
+    },
+    "ai_summary": {
+      "type": "string"
+    },
+    "ai_recommendation": {
+      "type": "string"
+    }
+  },
+  "required": [],
+  "name": "Lead"
+}
