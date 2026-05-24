@@ -7,35 +7,54 @@ export const useBusinessStore = create((set, get) => ({
   isLoading: false,
   error: null,
 
-  addBusiness: (business) => set((state) => ({ 
-    businesses: [...state.businesses, business] 
-  })),
-  
-  setCurrentBusiness: (business) => set({ currentBusiness: business }),
-  
-  addAIDecision: (decision) => set((state) => ({
-    aiDecisions: [...state.aiDecisions, { ...decision, timestamp: new Date().toISOString() }]
-  })),
-  
-  setLoading: (loading) => set({ isLoading: loading }),
-  setError: (error) => set({ error }),
-  
-  clearError: () => set({ error: null }),
-
-  // Simulate fetching businesses
   fetchBusinesses: async () => {
     set({ isLoading: true });
     try {
-      // In real app, call API or functions/
+      // Mock data - replace with real API call to functions/
       const mockBusinesses = [
-        { id: 1, name: 'EcoTech Solutions', status: 'building', progress: 65 },
-        { id: 2, name: 'AI Content Agency', status: 'deployed', progress: 100 }
+        { id: 1, name: 'AI SaaS Tool', status: 'deployed', progress: 85 },
+        { id: 2, name: 'Ecommerce Store', status: 'running', progress: 60 }
       ];
-      set({ businesses: mockBusinesses });
+      set({ businesses: mockBusinesses, isLoading: false });
     } catch (err) {
-      set({ error: err.message });
-    } finally {
-      set({ isLoading: false });
+      set({ error: err.message, isLoading: false });
     }
+  },
+
+  createBusiness: (idea) => {
+    const newBusiness = {
+      id: Date.now(),
+      name: idea.substring(0, 30) + '...',
+      status: 'generating',
+      progress: 10,
+      idea
+    };
+    set((state) => ({
+      businesses: [...state.businesses, newBusiness],
+      currentBusiness: newBusiness,
+      aiDecisions: [...state.aiDecisions, {
+        timestamp: new Date().toISOString(),
+        action: 'Started business creation',
+        details: idea
+      }]
+    }));
+    // Here you would call the Deno function
+  },
+
+  updateBusiness: (id, updates) => {
+    set((state) => ({
+      businesses: state.businesses.map(b => b.id === id ? { ...b, ...updates } : b),
+      currentBusiness: state.currentBusiness?.id === id ? { ...state.currentBusiness, ...updates } : state.currentBusiness
+    }));
+  },
+
+  addAIDecision: (action, details) => {
+    set((state) => ({
+      aiDecisions: [...state.aiDecisions, {
+        timestamp: new Date().toISOString(),
+        action,
+        details
+      }]
+    }));
   }
 }));
